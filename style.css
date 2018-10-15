@@ -1,0 +1,317 @@
+/*
+Type scale
+==========
+6.854em
+4.236em
+2.618em
+1.618em
+1em
+0.618em
+0.382em
+0.236em
+
+Colours
+==========
+Nervous Records Yellow
+rgb(255, 227, 13) / #FFE30D
+Kuler Shades:
+Bg Light: rgb(127, 113, 6) / #7F7106
+Bg Dark: rgb(64, 57, 3) / #403903
+Darkened: rgb(229, 204, 12) / #E5CC0C
+Darker: rgb(191, 170, 10) / #BFAA0A
+
+Fonts
+==========
+Original Imports Clearleft.com
+Light: @font-face { font-family: 'Gilroy'; src: url("../fonts/gilroy-bold-webfont.woff2") format("woff2"), url("../fonts/gilroy-bold-webfont.woff") format("woff"); font-weight: 700; font-style: normal; font-display: fallback; }
+Black: @font-face { font-family: 'Gilroy'; src: url("../fonts/gilroy-black-webfont.woff2") format("woff2"), url("../fonts/gilroy-black-webfont.woff") format("woff"); font-weight: 800; font-style: normal; font-display: fallback; }
+*/
+
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
+         url('fonts/gilroy-extrabold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/gilroy-light-webfont.woff2') format('woff2'),
+         url('fonts/gilroy-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* =======
+Base
+======= */
+
+h1,
+h2,
+.navbar-brand,
+.navbar-nav,
+.lead{
+  font-family: 'Gilroy', "Avenir", "Century Gothic", -apple-system, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2.618rem;
+  letter-spacing: -.01em;
+  text-rendering: optimizeLegibility;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.618rem;
+  letter-spacing: -.01em;
+  text-shadow: 1px 1px 0 rgba(0,0,0, .1);
+}
+
+h2 small.lead {
+  font-size: 1rem;
+}
+hr {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+table caption {
+  text-align: center;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+/* =======
+Layout
+======= */
+#mixcloud-intro,
+#profile-banner{
+  margin-bottom: 3em;
+}
+#profile-banner{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1140px;
+  border-bottom: 1px solid #FFE30D;
+  box-shadow: 0px 1px 1px rgba(0,0,0,.2);
+}
+
+
+/* =======
+Modules
+======= */
+/* Navbar */
+.navbar {
+  background-color: #fde000; /* Chiquita Yellow */
+  background-color: #ffe30d; /* Nervous Records Yellow */
+  background: linear-gradient(#FFE30D, #E5CC0C);
+  border-bottom: 1px solid #BFAA0A;
+  box-shadow: 0px 1px 0px #403903;
+  padding-bottom: .4rem;
+}
+.navbar-brand {
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: -.04em;
+  text-rendering: optimizeLegibility;
+  /* margin-top: .2rem; */
+  margin-top: -.1rem;
+  text-shadow: #BFAA0A 1px 1px 0px;
+}
+.navbar-brand img {
+  /* margin-bottom: -.2rem; */
+  margin-top: .2rem;
+  box-shadow: #BFAA0A 1px 1px 1px;
+  /* margin-right: .01em; */
+  /* border: 1px solid #7F7106; */
+}
+.navbar-toggler:focus {
+  outline: none;
+}
+.navbar-nav {
+  margin-top: .6em;
+  color: #403903;
+  /* text-align: center; */
+  font-weight: bold;
+  font-size: 1.618rem;
+}
+.nav-item {
+  border-top: 1px solid #BFAA0A;
+}
+/* Jumbotron */
+.jumbotron {
+  margin-bottom: 0;
+  /* padding-top: 1.5em; */
+  border-radius: 0;
+  border-bottom: 1px solid #FFE30D;
+  background-image: url('img/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  /* box-shadow: 0px 1px 1px #000; */
+}
+.jumbotron .container {
+  background-color: #000;
+  background-color: rgba(0,0,0, .9);
+}
+.jumbotron h1{
+  margin-top: .3em;
+  margin-bottom: .4em;
+  text-shadow: 1px 1px 0 #7F7106;
+}
+
+/* Buttons */
+.btn {
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0,0,0, .3);
+  box-shadow: 0px 1px 1px rgba(0,0,0, .2);
+}
+.btn:hover,
+.btn:focus {
+  position: relative;
+  bottom: 1px;
+  box-shadow: 0px 2px 2px rgba(0,0,0, .2);
+}
+.btn:active {
+  bottom: 0;
+  box-shadow: none;
+}
+a.btn {
+  text-decoration: none;
+}
+.btn-success {
+  background: linear-gradient(#28A745, #23913C);
+}
+.btn-success,
+.btn-success:hover {
+  border-color: #23913C;
+}
+.btn-primary {
+  border-color: #006FE5;
+  background: linear-gradient(#007bff, #006FE5);
+}
+a.btn .icon {
+  margin-top: -4px;
+  margin-right: 2px;
+  /* margin-left: -2px; */
+}
+a.btn-facebook {
+  background-color: #3b5998;
+  background: linear-gradient(#3B5998, #334D84);
+}
+.btn-facebook,
+.btn-facebook:hover {
+  border-color: #3B5998;
+}
+a.btn-instagram {
+  background-color: #dc2743;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+.btn-instagram,
+.btn-instagram:hover {
+  border-color: #e6683c;
+}
+a.btn-twitter {
+  background-color: #1da1f2;
+  background: linear-gradient(#1da1f2, #1A90D8);
+}
+.btn-twitter,
+.btn-twitter:hover {
+  border-color: #1da1f2;
+}
+a.btn-mixcloud {
+  background-color: #273a4b;
+  background: linear-gradient(#273A4B, #223241);
+}
+.btn-mixcloud,
+.btn-mixcloud:hover {
+  border-color: #273a4b;
+}
+a.btn-soundcloud {
+  background-color: #f50;
+  background: linear-gradient(#f50, #E54C00);
+}
+.btn-soundcloud,
+.btn-soundcloud:hover {
+  border-color: #f50;
+}
+a.btn-youtube {
+  background-color: #e30000;
+  background: linear-gradient(#e30000, #C90000);
+}
+.btn-youtube,
+.btn-youtube:hover {
+  border-color: #e30000;
+}
+a.btn-beatport {
+  background-color: #94d500;
+  border-color: #94d500;
+}
+a.btn-discogs {
+  background-color: #333;
+  border-color: #333;
+  background: linear-gradient(#333, #2C2C2C);
+}
+.btn-discogs,
+.btn-discogs:hover {
+  border-color: #333;
+}
+
+/* Instagram */
+.instagram-neighbor {
+  margin-top: 1.345em;
+}
+
+/* Tables */
+th.datetime, td.datetime {
+  text-align: right;
+}
+th.show-dates {
+  min-width: 120px;
+}
+
+/* Typography */
+.lead {
+  font-size: 1.618rem;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -.025em;
+  /* font-size: 1.44rem; */
+}
+.display-4 {
+  font-size: 2.618rem;
+}
+
+
+/* =======
+States
+======= */
+.btn[data-toggle="collapse"][aria-expanded="true"] {
+  display: none;
+}
+
+/* =======
+Theme
+======= */
+
+/* =======
+Responsive
+======= */
+@media (min-width: 575.98px) {}
+
+@media (min-width: 767.98px) {}
+
+@media (min-width: 991.98px) {}
+
+@media (min-width: 1199.98px) {}
